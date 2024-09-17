@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <title>Ediciones Fares</title>
+</head>
+    <body>
+        <header>
+            <h1>Ediciones Fares</h1>
+        </header>
+        <nav>
+            <a class="first" href="index.html">Principal</a>
+                <button>Libros</button>
+                <div></div>
+            <a href="alum.html">Inventario</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+    
+    <main class="w3-row-padding w3-container">
+        <div class="w3-container fcolor-d2 title">
+            <h2>Galería de libros</h2>
+        </div>
+    
+        <div class="w3-row-padding w3-section w3-stretch">
+            <div class="w3-col s3 w3-row-padding">
+                <img src="img/book1.jpeg" alt="Book 1" style="width:100%" onclick="onClick(this)">
+            </div>
+            <div class="w3-col s3 w3-row-padding">
+                <img src="img/book2.jpg" alt="Book 2" style="width:100%" onclick="onClick(this)">
+            </div>
+            <div class="w3-col s3 w3-row-padding"></div>
+                <img src="img/book3.jpg" alt="Book 3" style="width:24%" onclick="onClick(this)">
+            </div>
+            <div class="w3-col s3 w3-row-padding"></div>
+                <img src="img/book4.png" alt="Book 4" style="width:24%" onclick="onClick(this)">
+            </div>
+        </div>
+    
+        <div id="fdivimagen" class="w3-modal" onclick="this.style.display='none'">
+            <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+            <div class="w3-modal-content w3-animate-zoom">
+                <img id="fmg" style="width:100%">
+            </div>
+        </div>
+    </main>
+    
+    <script>
+        function onClick(element) {
+            document.getElementById("fmg").src = element.src;
+            document.getElementById("fdivimagen").style.display = "block";
+        }
+    </script>
+    
+    <?php include 'pie_pagina.html'; ?>
+    
+</body>
+</html>
